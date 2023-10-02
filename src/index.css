@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('./fonts/Nunito.ttf') format('woff'),
+         url('./fonts/Nunito-Italic.ttf') format('woff')
+        
+}
+
+:root{
+    font-family: 'Nunito';
+    
+}
+
+#root{
+    position: relative;
+}
+body{
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #303030;
+}
+h1{
+    font-weight: 800;
+}
+.gray-trans{
+    background: #00000049;
+}
+
+.fich{
+    top:calc(-500% - (27px * 5));
+    animation: caer 0.5s ease-in forwards 0.2s;
+}
+
+@keyframes caer{
+    100%{
+        top:0;
+    }
+}
+
+.btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: 3px solid gray;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    transition: 0.2s
+}
+.btn h1{
+    margin-bottom: 10px;
+    font-size: large;
+}
+
+.btn img{
+    width: 100px;
+    object-fit: contain;
+}
+
+.btn:hover{
+    border: 3px solid rgb(138, 64, 181);
+    color: rgb(138, 64, 181);
+}
+
+.btn:active{
+    opacity: 70%;
+    transition: 0s;
+}
